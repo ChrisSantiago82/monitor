@@ -1,0 +1,54 @@
+{
+    "name": "chrissantiago82/monitor",
+    "description": "Monitor",
+    "keywords": [
+        "chrissantiago82",
+        "monitor"
+    ],
+    "homepage": "https://github.com/chrissantiago82/monitor",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Christoph Krebs",
+            "email": "christoph@krebs-programming.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chrissantiago82\\Monitor\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Chrissantiago82\\Monitor\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Chrissantiago82\\Monitor\\MonitorServiceProvider"
+            ],
+            "aliases": {
+                "Monitor": "Chrissantiago82\\Monitor\\MonitorFacade"
+            }
+        }
+    }
+}

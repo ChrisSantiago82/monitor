@@ -22,7 +22,7 @@ class MonitorServiceProvider extends ServiceProvider
         // Automatically apply the package configuration
         //$this->mergeConfigFrom(__DIR__.'/../config/config.php', 'monitor');
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'krebsmonitor');
-        $this->app->make('chrissantiago82\monitor\MonitorController');
+        $this->app->make('Chrissantiago82\Monitor\MonitorController');
 
         /*
         // Register the main class to use with the facade

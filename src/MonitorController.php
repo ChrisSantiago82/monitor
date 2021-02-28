@@ -1,6 +1,6 @@
 <?php
 
-namespace chrissantiago82\monitor;
+namespace Chrissantiago82\Monitor;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;

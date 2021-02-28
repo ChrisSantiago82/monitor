@@ -1,8 +1,14 @@
 <?php
 
-/*
- * You can place your custom package configuration in here.
- */
 return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Monitoring Configuration File
+    |--------------------------------------------------------------------------
+    */
+
+    'key' => env('MONITOR_KEY'),
+
 
 ];

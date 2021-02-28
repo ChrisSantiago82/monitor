@@ -1,6 +1,6 @@
 <?php
 
-namespace Chrissantiago82\Monitor;
+namespace chrissantiago82\monitor;
 
 use Illuminate\Support\Facades\Facade;
 

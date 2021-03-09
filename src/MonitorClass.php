@@ -2,6 +2,7 @@
 
 namespace Chrissantiago82\Monitor;
 
+use Queue;
 
 class MonitorClass
 {
@@ -13,6 +14,7 @@ class MonitorClass
         $this->getDiskSpace();
         $this->getMemory();
         $this->getCpuLoad();
+        $this->getQueue();
     }
 
 
@@ -62,6 +64,12 @@ class MonitorClass
 
         $this->results['cpuLoad'] = $load2;
     }
+
+    protected function getQueue()
+    {
+        $this->results['queue'] = Queue::size();
+    }
+
 
 
 }

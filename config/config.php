@@ -10,5 +10,6 @@ return [
 
     'key' => env('MONITOR_KEY'),
 
+    'queues' => ['default'],
 
 ];

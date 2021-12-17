@@ -67,7 +67,12 @@ class MonitorClass
 
     protected function getQueue()
     {
-        $this->results['queue'] = Queue::size();
+        $total = 0;
+        foreach (config('krebsmonitor.queues') as $queue) {
+            $total = $total +  Queue::size($queue);
+        }
+
+        $this->results['queue'] = $total;
     }
 
 

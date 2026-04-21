@@ -20,8 +20,9 @@ class MonitorClass
 
     protected function getDiskSpace()
     {
-        $this->results['freeDiskPro'] = round(100/(disk_total_space(__DIR__) / disk_free_space(__DIR__)), 1);
-        $this->results['freeDiskGB'] = round(disk_free_space(__DIR__) / (1000 * 1000 * 1000), 1);
+        $path = (ini_get('open_basedir')) ? sys_get_temp_dir() : '/';
+        $this->results['freeDiskPro'] = round(100/(disk_total_space($path) / disk_free_space($path)), 1);
+        $this->results['freeDiskGB'] = round(disk_free_space($path) / (1000 * 1000 * 1000), 1);
     }
 
     protected function getMemory()

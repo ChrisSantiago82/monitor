@@ -2,7 +2,7 @@
 
 namespace Chrissantiago82\Monitor;
 
-use Queue;
+use Illuminate\Support\Facades\Queue;
 
 class MonitorClass
 {

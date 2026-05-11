@@ -2,8 +2,6 @@
 
 namespace Chrissantiago82\Monitor;
 
-use Illuminate\Http\Request;
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 
@@ -21,13 +19,24 @@ class MonitorController extends Controller
             return;
         }
 
-        //$monitorClass = new Monitor();
-
         $monitorClass = new MonitorClass();
-
 
         return response()->json($monitorClass->results);
 
+    }
+
+
+    public function queues($key)
+    {
+        if (config('krebsmonitor.key') === null) {
+            return;
+        }
+
+        if (config('krebsmonitor.key') != $key) {
+            return;
+        }
+
+        return response()->json(MonitorQueueClass::run());
     }
 
 }
